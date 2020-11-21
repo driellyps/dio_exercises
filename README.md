@@ -4,3 +4,4 @@ This will reunite all exercises and projects I will do on the bootcamps availabl
 ## Content
 - Instagram clone: Simple clone of Instagram's website landing page
 - Netflix clone: Clone of Netflix's website (user's home page)
+- Snake Game: project using JavaScript
