@@ -6,7 +6,7 @@ snake[0] = {
   x: 8 * box,
   y: 8 * box
 }
-let direction = 'right'; 
+let direction; 
 let food = {
   x: Math.floor(Math.random() * 15 + 1) * box,
   y: Math.floor(Math.random() * 15 + 1) * box
@@ -57,6 +57,7 @@ function startGame() {
     }
   }
 
+  /*
   // Makes snake reapear in opposite side if it crosses the border
   if(snake[0].x > 15 * box && direction === 'right') {
     snake[0].x = 0;
@@ -69,6 +70,25 @@ function startGame() {
   }
   if(snake[0].y < 0 && direction === 'up') {
     snake[0].y = 16 * box;
+  }
+  */
+
+   // Makes game end if snake touches the border
+   if(snake[0].x > 15 * box && direction === 'right') {
+    clearInterval(game);
+    alert('Game Over :(')
+  }
+  if(snake[0].x < 0 && direction === 'left') {
+    clearInterval(game);
+    alert('Game Over :(')
+  }
+  if(snake[0].y > 15 * box && direction === 'down') {
+    clearInterval(game);
+    alert('Game Over :(')
+  }
+  if(snake[0].y < 0 && direction === 'up') {
+    clearInterval(game);
+    alert('Game Over :(')
   }
 
   addBG();
