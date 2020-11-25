@@ -48,6 +48,15 @@ function update(event) {
 }
 
 function startGame() {
+
+  // Ends the game when snake meets itself
+  for(let i = 1; i < snake.length; i++) {
+    if(snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
+      clearInterval(game);
+      alert('Game Over :(')
+    }
+  }
+
   // Makes snake reapear in opposite side if it crosses the border
   if(snake[0].x > 15 * box && direction === 'right') {
     snake[0].x = 0;
