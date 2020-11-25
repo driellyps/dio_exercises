@@ -6,10 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Snake Game</title>
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="snake" width="512" height="512"></canvas>
+  <div class="container">
+    <h1>SNAKE GAME</h1>
+
+    <h4>Instructions:</h4>
+    <ol>
+      <li>Start the game by pressing the up, down, left or right key</li>
+      <li>If you lose, you will have to refresh the page</li>
+      <li>Have fun!</li>
+    </ol>
+
+  </div>
+  <div class="game">
+    <canvas id="snake" width="512" height="512"></canvas>
+  </div>
 
   <script src="main.js"></script>
 </body>
